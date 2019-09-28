@@ -42,7 +42,7 @@ function install_ninja() {
   (
     echo "∗ Downloading and installing ninja..."
     curl --silent --location --create-dirs --output "${install_path}/bin/ninja.zip" "$download_url" || fail "Could not download ninja $version"
-    unzip "${install_path}/bin/ninja.gz" || fail "Could not uncompress"
+    unzip "${install_path}/bin/ninja.zip" || fail "Could not uncompress"
     chmod +x "${install_path}/bin/ninja" || fail "Could not find uncompressed ninja binary"
     rm -rf "${install_path}/bin/ninja.zip"
 
