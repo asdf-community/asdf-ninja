@@ -7,7 +7,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest]
-        ninja: [1.0.0, 1.9.0]
+        ninja: [1.4.0, 1.9.0]
 
     runs-on: ${{ matrix.os }}
 
