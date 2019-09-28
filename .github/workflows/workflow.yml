@@ -1,0 +1,27 @@
+name: Main workflow
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest]
+        ninja: [1.0.0, 1.9.0]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Install asdf
+        run: git clone https://github.com/asdf-vm/asdf.git $HOME/asdf
+
+      - name: Install ninja and run test
+        run: |
+          . $HOME/asdf/asdf.sh
+          asdf plugin-add ninja $GITHUB_WORKSPACE
+          asdf install ninja ${{ matrix.ninja }}
+          asdf global ninja ${{ matrix.ninja }}
+          ninja --version
