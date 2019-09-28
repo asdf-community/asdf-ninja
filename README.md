@@ -10,6 +10,8 @@ Ninja plugin for ASDF version manager
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![License](https://img.shields.io/github/license/asdf-community/asdf-ninja?color=brightgreen)](https://github.com/asdf-community/asdf-ninja/blob/master/LICENSE)
 
+**Note**: This plugin only supports Ninja **_1.4.0_** or later.
+
 ## Prerequirements
 
 - Make sure you have the required dependencies installed:
