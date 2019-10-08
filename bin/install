@@ -45,24 +45,12 @@ function install_ninja() {
     unzip "${install_path}/bin/ninja.zip" -d "${install_path}/bin" >/dev/null || fail "Could not uncompress"
     chmod +x "${install_path}/bin/ninja" || fail "Could not find uncompressed ninja binary"
     rm "${install_path}/bin/ninja.zip" || fail "Could not remove zip file"
-
-    echo
-    echo "=================================================="
-    echo "Ninja $version has been installed!"
-    echo "--------------------------------------------------"
-    echo "Activate globally with:"
-    echo
-    echo "$ asdf global ninja $version"
-    echo "--------------------------------------------------"
-    echo "Activate locally in the current folder with:"
-    echo
-    echo "$ asdf local ninja $version"
-    echo "=================================================="
-    echo
-  ) || (
-    rm -rf "$install_path"
-    fail "An error occurred"
-  )
+    echo "The installation was successful!"
+  ) ||
+    (
+      rm -rf "$install_path"
+      fail "An error occurred"
+    )
 }
 
 install_ninja "$ASDF_INSTALL_TYPE" "$ASDF_INSTALL_VERSION" "$ASDF_INSTALL_PATH"
