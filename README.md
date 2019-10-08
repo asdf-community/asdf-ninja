@@ -17,7 +17,6 @@ Ninja plugin for ASDF version manager
 - Make sure you have the required dependencies installed:
   - curl
   - git
-  - jq
   - unzip
 
 ## Installation
