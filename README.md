@@ -1,6 +1,6 @@
 <div align="center">
 <h1>asdf-ninja 📦</h1>
-Ninja plugin for ASDF version manager
+Ninja plugin for asdf version manager
 </div>
 <hr />
 
