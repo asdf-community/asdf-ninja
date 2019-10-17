@@ -29,13 +29,11 @@ function install_ninja() {
 
   local platform
 
-  if [[ "$OSTYPE" == "linux"* ]]; then
-    platform="linux"
-  elif [[ "$OSTYPE" == "darwin"* ]]; then
-    platform="mac"
-  else
-    fail "Unsupported platform..."
-  fi
+  case "$OSTYPE" in
+    darwin*) platform="mac" ;;
+    linux*) platform="linux" ;;
+    *) fail "Unsupported platform" ;;
+  esac
 
   local download_url="https://github.com/ninja-build/ninja/releases/download/v${version}/ninja-${platform}.zip"
 
