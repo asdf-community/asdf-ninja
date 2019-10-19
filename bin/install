@@ -36,13 +36,14 @@ function install_ninja() {
   esac
 
   local download_url="https://github.com/ninja-build/ninja/releases/download/v${version}/ninja-${platform}.zip"
+  local source_path="${install_path}/bin/ninja.zip"
 
   (
     echo "∗ Downloading and installing ninja..."
-    curl --silent --location --create-dirs --output "${install_path}/bin/ninja.zip" "$download_url" || fail "Could not download ninja $version"
-    unzip "${install_path}/bin/ninja.zip" -d "${install_path}/bin" >/dev/null || fail "Could not uncompress"
+    curl --silent --location --create-dirs --output "$source_path" "$download_url" || fail "Could not download ninja $version"
+    unzip "$source_path" -d "${install_path}/bin" >/dev/null || fail "Could not uncompress"
     chmod +x "${install_path}/bin/ninja" || fail "Could not find uncompressed ninja binary"
-    rm "${install_path}/bin/ninja.zip" || fail "Could not remove zip file"
+    rm "$source_path" || fail "Could not remove zip file"
     echo "The installation was successful!"
   ) ||
     (
