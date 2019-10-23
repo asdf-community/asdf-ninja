@@ -28,7 +28,7 @@ function install_ninja() {
   local install_path=$3
 
   if [ "$install_type" != "version" ]; then
-    fail "asdf-ninja supports release installs only."
+    fail "asdf-ninja supports release installs only"
   fi
 
   local platform
