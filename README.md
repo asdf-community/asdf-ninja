@@ -1,5 +1,5 @@
 <div align="center">
-<h1>asdf-ninja 📦</h1>
+<h1>asdf-ninja</h1>
 <span><a href="https://ninja-build.org">Ninja</a> plugin for asdf version manager</span>
 </div>
 <hr />
