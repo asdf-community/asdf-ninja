@@ -1,13 +1,16 @@
 name: Main workflow
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 0 * * 5"
 
 jobs:
   build:
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest]
-        ninja: [1.4.0, 1.9.0]
 
     runs-on: ${{ matrix.os }}
 
@@ -22,9 +25,9 @@ jobs:
         run: |
           . $HOME/asdf/asdf.sh
           asdf plugin-add ninja $GITHUB_WORKSPACE
-          asdf install ninja ${{ matrix.ninja }}
-          asdf global ninja ${{ matrix.ninja }}
-          ninja --version
+          asdf install ninja latest
+        env:
+          GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   test:
     runs-on: macOS-latest
