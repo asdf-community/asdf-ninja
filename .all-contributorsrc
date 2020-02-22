@@ -16,6 +16,15 @@
         "maintenance",
         "infra"
       ]
+    },
+    {
+      "login": "jeffryang24",
+      "name": "Jeffry Angtoni",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/8284757?v=4",
+      "profile": "https://jeffryangtoni.com",
+      "contributions": [
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
