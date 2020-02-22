@@ -40,6 +40,7 @@ Thanks goes to these wonderful people
 <table>
   <tr>
     <td align="center"><a href="https://bsky.moe"><img src="https://avatars3.githubusercontent.com/u/38746192?v=4" width="100px;" alt=""/><br /><sub><b>BSKY</b></sub></a><br /><a href="https://github.com/asdf-community/asdf-ninja/commits?author=imbsky" title="Code">💻</a> <a href="https://github.com/asdf-community/asdf-ninja/commits?author=imbsky" title="Documentation">📖</a> <a href="#maintenance-imbsky" title="Maintenance">🚧</a> <a href="#infra-imbsky" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://jeffryangtoni.com"><img src="https://avatars0.githubusercontent.com/u/8284757?v=4" width="100px;" alt=""/><br /><sub><b>Jeffry Angtoni</b></sub></a><br /><a href="#infra-jeffryang24" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
   </tr>
 </table>
 
